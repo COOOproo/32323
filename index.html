@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Свадьба Натали и Андрей</title>
+  <link href="https://fonts.cdnfonts.com/css/ouvality-cyrillic" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Ouvality Cyrillic', serif;
+      background: #fff;
+      color: #000;
+      overflow-x: hidden;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .cover {
+      background: url('background.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      position: relative;
+    }
+    .cover h1 {
+      font-size: 4em;
+    }
+    .timer {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .timer div {
+      font-size: 1.2em;
+    }
+    .divider {
+      border-top: 2px dotted black;
+      width: 80%;
+      margin: 30px auto;
+      position: relative;
+    }
+    .divider::after {
+      content: "\2665";
+      position: absolute;
+      top: -0.8em;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      padding: 0 10px;
+      font-size: 1.2em;
+    }
+    .form input,
+    .form button,
+    .form textarea {
+      margin: 10px 0;
+      padding: 10px;
+      font-family: inherit;
+      width: 100%;
+      max-width: 300px;
+      border: 1px solid #000;
+    }
+    .form label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    .form input[type="radio"],
+    .form input[type="checkbox"] {
+      width: auto;
+    }
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    .calendar div {
+      padding: 10px;
+      border-radius: 50%;
+    }
+    .calendar .highlight {
+      border: 2px dashed #000;
+    }
+    img.flower {
+      position: absolute;
+      width: 100px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <section class="cover">
+    <h1><span style="font-size:1.5em">МАКСИМ & АЛИСА</span></h1>
+    <div class="timer">
+      <div>348 дней</div>
+      <div>10 часов</div>
+      <div>55 минут</div>
+      <div>46 секунд</div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>ДОРОГИЕ ГОСТИ!</h2>
+    <button>ВКЛ. МУЗЫКУ</button>
+    <p>В нашей жизни произойдет очень важное событие — наша свадьба!<br>Мы верим и надеемся, что этот день станет красивым началом долгой и счастливой жизни.</p>
+    <h3>АВГУСТ 2025</h3>
+    <div class="calendar">
+      <div>ПН</div><div>ВТ</div><div>СР</div><div>ЧТ</div><div>ПТ</div><div>СБ</div><div>ВС</div>
+      <div></div><div></div><div></div><div></div><div>1</div><div>2</div><div>3</div>
+      <div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div>
+      <div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div class="highlight">16</div><div>17</div>
+      <div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div>
+      <div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>ПРОГРАММА ДНЯ</h2>
+    <p>15:20 Регистрация</p>
+    <p>17:30 Фуршет</p>
+    <p>18:00 Ресторан</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>МЕСТО ТОРЖЕСТВА</h2>
+    <p>Банкетный зал "Заберег"<br>Ленинградская область,<br>41К-313, 30</p>
+    <button>КАРТА</button>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>ДЕТАЛИ</h2>
+    <p>Дорогие гости, приносите с собой <br>веселье и радость в душе, <br>а подарки — в конверте!</p>
+    <p>Будем признательны, если вы поддержите цветовую гамму нашей свадьбы</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="form">
+    <h2>АНКЕТА</h2>
+    <label>Напишите, пожалуйста, Ваши ФИО</label>
+    <input type="text" placeholder="Ваши ФИО" />
+
+    <label>Сможете ли присутствовать на нашем торжестве?</label>
+    <input type="radio" name="attendance" /> Я с удовольствием приду<br>
+    <input type="radio" name="attendance" /> Буду со своей парой<br>
+    <input type="radio" name="attendance" /> К сожалению, не смогу присутствовать<br>
+    <input type="radio" name="attendance" /> Сообщу позже<br>
+
+    <label>Что предпочитаете из напитков?</label>
+    <input type="checkbox" /> Красное вино<br>
+    <input type="checkbox" /> Белое вино<br>
+    <input type="checkbox" /> Шампанское<br>
+    <input type="checkbox" /> Водка<br>
+    <input type="checkbox" /> Виски<br>
+    <input type="checkbox" /> Коньяк<br>
+    <input type="checkbox" /> Не пью алкоголь<br>
+
+    <button>Отправить</button>
+  </section>
+
+  <!-- Цветочные PNG как украшения -->
+  <img src="1.png" class="flower" style="top: 10px; left: 0;" />
+  <img src="3 (1).png" class="flower" style="bottom: 20px; right: 0;" />
+  <img src="4.png" class="flower" style="top: 100px; right: 10px;" />
+</body>
+</html>
